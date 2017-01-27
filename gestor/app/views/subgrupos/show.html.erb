@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<div class="conteiner">
+
+<ul class="list-group">
+  <button type="button" class="list-group-item list-group-item-action active">
+    Marca
+  </button>
+  <li class="list-group-item list-group-item-action">Nome: <%= @subgrupo.nome %></li>
+  <li class="list-group-item list-group-item-action">Linha: <%= @subgrupo.grupo.nome %></li>
+  <li class="list-group-item list-group-item-action">Inativo: <%= @subgrupo.inativo %></li>
+</ul>
+
+<%= link_to 'Editar', edit_subgrupo_path(@subgrupo), class: :btn   %>
+<%= link_to 'Voltar', subgrupos_path, class: :btn   %>

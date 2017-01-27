@@ -1,0 +1,42 @@
+<%= simple_form_for @promocao, :html => {multipart: true} do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :nome, placeholder: 'Nome' %>
+    <%= f.input :descricao, placeholder: 'Descrição', label: 'Descrição' %>
+    Inativo
+    <%= f.check_box :inativo %><br><br>
+
+    <table style="width:100%">
+      <tr>
+        <td><%= image_tag @promocao.img1.url(:medium)%> <%= f.file_field :img1 %></td>
+        <td><%= image_tag @promocao.img2.url(:medium)%><%= f.file_field :img2 %></td>
+        <td><%= image_tag @promocao.img3.url(:medium)%><%= f.file_field :img3 %></td>
+        <td><%= image_tag @promocao.img4.url(:medium)%><%= f.file_field :img4 %></td>
+      </tr>
+      <tr>
+        <td><%= image_tag @promocao.img5.url(:medium)%><%= f.file_field :img5 %></td>
+        <td><%= image_tag @promocao.img6.url(:medium)%><%= f.file_field :img6 %></td>
+        <td><%= image_tag @promocao.img7.url(:medium)%><%= f.file_field :img7 %></td>
+        <td><%= image_tag @promocao.img8.url(:medium)%><%= f.file_field :img8 %></td>
+      </tr>
+      <tr>
+        <td><%= image_tag @promocao.img9.url(:medium)%><%= f.file_field :img9 %></td>
+        <td><%= image_tag @promocao.img10.url(:medium)%><%= f.file_field :img10 %></td>
+        <td><%= image_tag @promocao.img11.url(:medium)%><%= f.file_field :img11 %></td>
+        <td><%= image_tag @promocao.img12.url(:medium)%><%= f.file_field :img12 %></td>
+      </tr>
+      <tr>
+        <td><%= image_tag @promocao.img13.url(:medium)%><%= f.file_field :img13 %></td>
+        <td><%= image_tag @promocao.img14.url(:medium)%><%= f.file_field :img14 %></td>
+        <td><%= image_tag @promocao.img15.url(:medium)%><%= f.file_field :img15 %></td>
+      </tr>
+    </table>
+
+  </div>
+  <br><br>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

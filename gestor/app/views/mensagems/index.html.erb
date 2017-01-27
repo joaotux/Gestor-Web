@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<div class="conteiner">
+<h1 id="titulo">Mensagens</h1>
+<div class="table-responsive">
+  <table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Assunto</th>
+      <th>Prioridade</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @mensagems.each do |mensagem| %>
+      <tr>
+        <td width="20%"><%= mensagem.assunto %></td>
+        <!--<td width="10%"><%= mensagem.mensagem %></td>-->
+        <td width="60%"><%= mensagem.prioridade %></td>
+        <!--<td width="10%"><%= mensagem.lido %></td>-->
+        <td width="10%"><%= link_to 'Ver', mensagem, class: :btn    %></td>
+        <td width="10%"><%= link_to 'Editar', edit_mensagem_path(mensagem), 'data-turbolinks' => false, class: :btn    %></td>
+        <!--<td width="10%"><%= link_to 'Deletar', mensagem, method: :delete, data: { confirm: 'Deseja mesmo deletar esta mensagem?' }, 'data-turbolinks' => false, :class=>'btn btn-large btn-danger'   %></td>-->
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+</div>
+</div>
+
+<%= link_to 'Nova Mensagem', new_mensagem_path, 'data-turbolinks' => false, class: :btn %>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Gestor Web - Ideal Moveis</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+   <body <%= yield(:body_attributes) %>>
+
+    <div class="container">
+    <nav class="navbar navbar-default" id="navegacao">
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <%if user_signed_in?%>
+        <li><%= link_to "INÍCIO", root_path, id: :cores %></li>
+        <li><%= link_to "LINHAS", grupos_path, id: :cores %></li>
+        <li><%= link_to "MARCAS", subgrupos_path, id: :cores %></li>
+        <li><%= link_to "DEPARTAMENTOS", categoria_path, id: :cores %></li>
+        <li><%= link_to "PRODUTOS", produtos_path, id: :cores %></li>
+        <li><%= link_to "PROMOÇÕES ", promocaos_path, id: :cores %></li>
+        <li><%= link_to "MENSAGENS", mensagems_path, id: :cores %></li>
+        <%end%>
+      </ul>
+
+      <ul class="nav navbar-nav navbar-right">
+        <%if user_signed_in?%>
+        <li><%= link_to image_tag("icon/logout.png", size: "60", alt: "Sair"), destroy_user_session_path, method: :delete, id: :logar %></li>
+        <%else%>
+        <li><%= link_to image_tag("icon/administrador.png", size: "70"), user_session_path, id: :logar %></li>
+        <%end%>
+      </ul>
+
+    </div><!-- /.navbar-collapse -->
+</nav>
+    <%= yield %>
+  </div><!-- /.container-->
+
+  <!--Footer-->
+  <br>
+  <footer class="footer">
+    <div class="container">
+      <p class="text-muted" id="footercor">Developer João Rafael - 2016</p>
+    </div>
+  </footer>
+  </body>
+</html>

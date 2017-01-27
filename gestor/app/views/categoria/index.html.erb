@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<div class="conteiner">
+<h1 id="titulo">Departamentos</h1>
+
+<div class="table-responsive">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Nome</th>
+        <th>Marca</th>
+      </tr>
+    </thead>
+  <tbody>
+    <% @categoria.each do |categorium| %>
+      <tr>
+        <td width="50%"><%= categorium.nome %></td>
+        <td width="20%"><%= categorium.subgrupo.nome %></td>
+        <td width="10%"><%= link_to 'Ver', categorium, class: :btn   %></td>
+        <td width="10%"><%= link_to 'Editar', edit_categorium_path(categorium), class: :btn   %></td>
+        <!--<td><%= link_to 'Excluir', categorium, method: :delete, data: { confirm: 'Você tem certeza disso?' } %></td>-->
+        <td width="10%"><%= link_to 'Nova', new_categorium_path, class: :btn   %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+</div>
+</div>
+
+<%= link_to 'Novo Departamento', new_categorium_path, class: :btn   %>

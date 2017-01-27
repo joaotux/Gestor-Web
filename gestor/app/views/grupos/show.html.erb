@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<div class="conteiner">
+
+<ul class="list-group">
+  <button type="button" class="list-group-item list-group-item-action active">
+    Linhas
+  </button>
+  <li class="list-group-item list-group-item-action">Nome: <%= @grupo.nome %></li>
+  <li class="list-group-item list-group-item-action">Inativo: <%= @grupo.inativo %></li>
+</ul>
+
+<%= link_to 'Editar Linha', edit_grupo_path(@grupo), class: :btn   %>
+<%= link_to 'Voltar', grupos_path, class: :btn   %>

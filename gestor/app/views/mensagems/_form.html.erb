@@ -1,0 +1,15 @@
+<%= simple_form_for(@mensagem, html: {class: 'form-vertical'}) do |f| %>
+  <%= f.error_notification %>
+  <div class="container">
+    <%= f.input :assunto, placeholder: 'Assunto' %>
+    <%= f.text_area :mensagem, :class=> 'ckeditor' %>
+    <br>
+    Prioridade
+    <%= f.check_box :prioridade %>
+    <br>
+    Arquivar
+    <%= f.check_box :lido %>
+    <br><br>
+    <%= f.button :submit %>
+  </div>
+<% end %>

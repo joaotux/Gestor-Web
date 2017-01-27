@@ -1,0 +1,28 @@
+<p id="notice"><%= notice %></p>
+
+<div class="conteiner">
+<h1 id="titulo">Promoções</h1>
+<div class="table-responsive">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Nome</th>
+        <th>Descrição</th>
+      </tr>
+    </thead>
+  <tbody>
+    <% @promocaos.each do |promocao| %>
+    <tr>
+      <td width="70%"><%= promocao.nome %></td>
+      <td width="70%"><%= promocao.descricao %></td>
+      <td width="10%"><%= link_to 'Ver', promocao, class: :btn   %></td>
+      <td width="10%"><%= link_to 'Editar', edit_promocao_path(promocao), class: :btn   %></td>
+      <td width="10%"><%= link_to 'Nova', new_promocao_path, class: :btn   %></td>
+    </tr>
+  <% end %>
+</tbody>
+</table>
+</div>
+</div>
+
+<%= link_to 'Nova Promocao', new_promocao_path, class: :btn %>

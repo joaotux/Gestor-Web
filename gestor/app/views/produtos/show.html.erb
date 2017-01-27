@@ -1,0 +1,26 @@
+<p id="notice"><%= notice %></p>
+<div class="conteiner">
+
+<ul class="list-group">
+  <button type="button" class="list-group-item list-group-item-action active">
+    Produto
+  </button>
+  <li class="list-group-item list-group-item-action">Nome: <%= @produto.nome %></li>
+  <li class="list-group-item list-group-item-action">Nome: <%= @produto.referencia %></li>
+  <li class="list-group-item list-group-item-action">Informações Técnicas: <%= raw @produto.descricao %></li>
+  <li class="list-group-item list-group-item-action">Departamento: <%= @produto.categorium.nome%></li>
+  <li class="list-group-item list-group-item-action">Marca: <%= @produto.subgrupo.nome%></li>
+  <li class="list-group-item list-group-item-action">Inativo: <%= @produto.inativo %></li>
+</ul>
+
+<table style="width:100%">
+  <tr>
+    <td><%= image_tag @produto.imagem1.url(:medium) %></td>
+    <td><%= image_tag @produto.imagem2.url(:medium) %></td>
+    <td><%= image_tag @produto.imagem3.url(:medium) %></td>
+  </tr>
+</table>
+<br><br>
+<%= link_to 'Editar Produto', edit_produto_path(@produto), 'data-turbolinks' => false, class: :btn  %>
+<%= link_to 'Voltar', produtos_path, class: :btn  %>
+</div>

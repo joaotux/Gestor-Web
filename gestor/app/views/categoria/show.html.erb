@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<div class="conteiner">
+
+<ul class="list-group">
+  <button type="button" class="list-group-item list-group-item-action active">
+    Departamento
+  </button>
+  <li class="list-group-item list-group-item-action">Nome: <%= @categorium.nome %></li>
+  <li class="list-group-item list-group-item-action">Marca: <%= @categorium.subgrupo.nome %></li>
+  <li class="list-group-item list-group-item-action">Inativo: <%= @categorium.inativo %></li>
+</ul>
+
+<%= link_to 'Editar', edit_categorium_path(@categorium), class: :btn   %>
+<%= link_to 'Voltar', categoria_path, class: :btn   %>

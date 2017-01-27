@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+<div class="conteiner">
+
+<ul class="list-group">
+  <button type="button" class="list-group-item list-group-item-action active">
+    Promoção
+  </button>
+  <li class="list-group-item list-group-item-action">Nome: <%= @promocao.nome %></li>
+  <li class="list-group-item list-group-item-action">Descrição: <%= @promocao.descricao %></li>
+  <li class="list-group-item list-group-item-action">Inativo: <%= @promocao.inativo %></li>
+</ul>
+
+<table style="width:100%" border="5px">
+  <tr>
+    <td><%= image_tag @promocao.img1.url(:medium)%></td>
+    <td><%= image_tag @promocao.img2.url(:medium)%></td>
+    <td><%= image_tag @promocao.img3.url(:medium)%></td>
+    <td><%= image_tag @promocao.img4.url(:medium)%></td><br>
+  </tr>
+  <tr>
+    <td><%= image_tag @promocao.img5.url(:medium)%></td>
+    <td><%= image_tag @promocao.img6.url(:medium)%></td>
+    <td><%= image_tag @promocao.img7.url(:medium)%></td>
+    <td><%= image_tag @promocao.img8.url(:medium)%></td>
+  </tr>
+  <tr>
+    <td><%= image_tag @promocao.img9.url(:medium)%></td>
+    <td><%= image_tag @promocao.img10.url(:medium)%></td>
+    <td><%= image_tag @promocao.img11.url(:medium)%></td>
+    <td><%= image_tag @promocao.img12.url(:medium)%></td>
+  </tr>
+  <tr>
+    <td><%= image_tag @promocao.img13.url(:medium)%></td>
+    <td><%= image_tag @promocao.img14.url(:medium)%></td>
+    <td><%= image_tag @promocao.img15.url(:medium)%></td>
+  </tr>
+</table>
+<br><br>
+
+<%= link_to 'Editar Produto', edit_promocao_path(@promocao), class: :btn  %>
+<%= link_to 'Voltar', promocaos_path, class: :btn  %>

@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<div class="conteiner">
+<h1 id="titulo">Marcas</h1>
+<div class="table-responsive">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Nome</th>
+        <th>Linha</th>
+      </tr>
+    </thead>
+  <tbody>
+    <% @subgrupos.each do |subgrupo| %>
+      <tr>
+        <td width="50%"><%= subgrupo.nome %></td>
+        <td width="20%"><%= subgrupo.grupo.nome %></td>
+        <td width="10%"><%= link_to 'Ver', subgrupo, class: :btn   %></td>
+        <td width="10%"><%= link_to 'Editar', edit_subgrupo_path(subgrupo), class: :btn   %></td>
+        <!--<td><%= link_to 'Excluir', subgrupo, method: :delete, data: { confirm: 'Você tem certeza disso?' } %></td>-->
+        <td width="10%"><%= link_to 'Novo', new_subgrupo_path, class: :btn   %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+</div>
+</div>
+
+
+<%= link_to 'Nova Marca', new_subgrupo_path, class: :btn   %>

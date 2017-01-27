@@ -1,0 +1,10 @@
+<%= simple_form_for(@categorium, html: {class: 'form-vertical'}) do |f| %>
+  <%= f.error_notification %>
+
+    <%= f.input :nome, placeholder: 'Departamento' %>
+    <%= f.association :subgrupo  %>
+    Inativo
+    <%= f.check_box :inativo %><br><br>
+
+    <%= f.button :submit %>
+<% end %>

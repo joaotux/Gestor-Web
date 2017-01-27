@@ -1,0 +1,18 @@
+<%= simple_form_for @produto, :html => {multipart: true} do |f| %>
+  <%= f.error_notification %>
+
+
+    <%= f.input :nome, placeholder: 'Nome' %>
+    <%= f.input :referencia, placeholder: 'Referência', label: 'Referência' %>
+    <%= f.text_area :descricao, :class => 'ckeditor'%><br>
+    <%= f.association :subgrupo,  label: 'Subgrupo' %>
+    <%= f.association :categorium, label: 'Categoria'%>
+    Inativo
+    <%= f.check_box :inativo %><br><br>
+
+    <%= f.file_field :imagem1 %>
+    <%= f.file_field :imagem2 %>
+    <%= f.file_field :imagem3 %>
+    <br>
+    <%= f.button :submit %>
+<% end %>

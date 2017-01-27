@@ -1,0 +1,10 @@
+<%= simple_form_for(@grupo, html: {class: 'form-vertical'}) do |f| %>
+  <%= f.error_notification %>
+<div class="container">
+  <%= f.input :nome, placeholder: 'Linha' %>
+  Inativo
+  <%= f.check_box :inativo %><br><br>
+
+    <%= f.submit %>
+</div>
+<% end %>

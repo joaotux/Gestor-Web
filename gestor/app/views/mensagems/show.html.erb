@@ -1,0 +1,16 @@
+<p id="notice"><%= notice %></p>
+
+<div class="conteiner">
+
+<ul class="list-group">
+  <button type="button" class="list-group-item list-group-item-action active">
+    Mensagens
+  </button>
+
+  <li class="list-group-item list-group-item-action">Assunto: <%= @mensagem.assunto %></li>
+  <li class="list-group-item list-group-item-action"><%= raw @mensagem.mensagem %></li>
+  <li class="list-group-item list-group-item-action">Prioridade: <%= @mensagem.prioridade %></li>
+</ul>
+
+<%= link_to 'Editar Mensagem', edit_mensagem_path(@mensagem), 'data-turbolinks' => false, class: :btn   %>
+<%= link_to 'Voltar', mensagems_path, class: :btn   %>

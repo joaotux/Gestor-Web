@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from themeluxury.com/preview/deluxe/pages/login.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 20 Jan 2017 18:57:21 GMT -->
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="author" content="">
+<title>Login | Deluxe</title>
+<%= csrf_meta_tags %>
+<%= stylesheet_link_tag    'bootstrap', media: 'all', 'data-turbolinks-track': 'reload' %>
+<%= stylesheet_link_tag    'material-design-iconic-font', media: 'all', 'data-turbolinks-track': 'reload' %>
+<%= stylesheet_link_tag    'animate', media: 'all', 'data-turbolinks-track': 'reload' %>
+<%= stylesheet_link_tag    'ripple.min', media: 'all', 'data-turbolinks-track': 'reload' %>
+<%= stylesheet_link_tag    'hover', media: 'all', 'data-turbolinks-track': 'reload' %>
+<%= stylesheet_link_tag    'social-buttons', media: 'all', 'data-turbolinks-track': 'reload' %>
+<%= stylesheet_link_tag    'deluxe-admin', media: 'all', 'data-turbolinks-track': 'reload' %>
+</head>
+
+<body id="pages">
+<article>
+<div id="pages-form" class="container animated fadeIn">
+<section>
+<div class="row">
+<div class="col-md-4 col-md-offset-4">
+<div class="panel box-shadow">
+<div class="panel-body center-block">
+<div class="pages-header text-center">
+<div class="pages-box-icon"><i class="zmdi zmdi-account"></i></div>
+<h4>Entrar no sistema</h4>
+</div>
+<%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+
+<form role="form">
+<fieldset>
+<div class="form-group">
+
+<%= f.input :email, required: false, autofocus: true, label: 'E-mail'%>
+
+</div>
+<div class="form-group">
+
+<%= f.input :password, required: false, label: 'Senha'%>
+
+</div>
+
+<%= f.button :submit, "Entrar", class: 'btn btn-success btn-block' %>
+
+<%end%>
+
+</fieldset>
+</form>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+</article>
+
+<script src="../assets/js/jquery-2.2.4.min.js"></script>
+
+<script src="../assets/js/bootstrap.min.js"></script>
+
+<script src="../assets/js/ripple.min.js"></script>
+
+<script src="../assets/js/pages.html"></script>
+</body>
+
+<!-- Mirrored from themeluxury.com/preview/deluxe/pages/login.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 20 Jan 2017 18:57:21 GMT -->
+</html>
